@@ -5,6 +5,7 @@ package at.fhj.iit;
  */
 public class SimpleDrink extends Drink{
     //test
+    //TEST 2.1
     /**
      * uses only one liquid
      */
