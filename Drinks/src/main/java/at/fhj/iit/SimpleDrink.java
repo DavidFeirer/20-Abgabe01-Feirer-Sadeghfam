@@ -4,6 +4,7 @@ package at.fhj.iit;
  * drinks
  */
 public class SimpleDrink extends Drink{
+    //test
     /**
      * uses only one liquid
      */
