@@ -17,6 +17,11 @@ public abstract class Drink {
     public Drink(String name) {
         this.name = name;
     }
+
+    public Drink(){
+
+    }
+
     /**
      * Calculates and returns volume of drink
      *
