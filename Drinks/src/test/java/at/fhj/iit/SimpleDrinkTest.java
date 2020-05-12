@@ -1,7 +1,35 @@
 package at.fhj.iit;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Testing SimpleDrink implementation")
 public class SimpleDrinkTest {
+
+    private SimpleDrink beer, limo;
+
+    /**
+     * inits an alcoholic and nonalcoholic liquid for EACH test
+     */
+    @BeforeEach
+    void setup() {
+        // SETUP PHASE
+        beer = new SimpleDrink("Puntigamer", new Liquid("Bier", 0.5, 5.0));
+        limo = new SimpleDrink("Fanta", new Liquid("Orangenlimo", 1.0, 0.0));
+    }
+
+    /**
+     * Testing the Constructure for an alcoholic liquid (beer)
+     */
+    @Test
+    @DisplayName("Testing constructor beer")
+    public void testConstructorAlcoholic(){
+        assertEquals("Puntigamer", beer.getName());
+        assertEquals(0.5, beer.getVolume(), 0.001);
+        assertEquals(5.0, beer.getAlcoholPercent(), 0.001);
+        assertTrue(beer.isAlcoholic());
+    }
 }

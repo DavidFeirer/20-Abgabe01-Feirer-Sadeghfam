@@ -41,4 +41,12 @@ public abstract class Drink {
      * @return true when alcoholic liquids are present, otherwise false
      */
     public abstract boolean isAlcoholic();
+    /**
+     * Get the name of the Drink
+     *
+     * @return the name of drink
+     */
+    public String getName() {
+        return name;
+    }
 }
