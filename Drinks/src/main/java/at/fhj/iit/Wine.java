@@ -44,25 +44,6 @@ public class Wine extends SimpleDrink{
     }
 
     /**
-     * Getter taste of wine
-     *
-     * @return taste of wine
-     */
-    public ArrayList<String> getTaste() {
-        return taste;
-    }
-
-
-    /**
-     * Setter for the taste
-     *
-     * @param taste new taste
-     */
-    public void setTaste(ArrayList<String> taste) {
-        this.taste = taste;
-    }
-
-    /**
      * Get the List Taste in String
      */
     public String getTasteString(){
@@ -101,24 +82,6 @@ public class Wine extends SimpleDrink{
      */
     public void setColor(String color) {
         this.color = color;
-    }
-
-    /**
-     * Getter dishes the wine is served to
-     *
-     * @return dishes
-     */
-    public ArrayList<String> getDishes() {
-        return dishes;
-    }
-
-    /**
-     * Setter for the dishes the wine is served to
-     *
-     * @param dishes new dishes
-     */
-    public void setDishes(ArrayList<String> dishes) {
-        this.dishes = dishes;
     }
 
     /**
