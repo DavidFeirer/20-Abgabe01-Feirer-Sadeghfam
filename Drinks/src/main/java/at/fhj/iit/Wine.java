@@ -1,5 +1,6 @@
 package at.fhj.iit;
 
+import javax.naming.directory.AttributeModificationException;
 import java.util.ArrayList;
 
 public class Wine extends SimpleDrink{
@@ -22,6 +23,7 @@ public class Wine extends SimpleDrink{
     /**
      * temperature of the wine in Celsius
      */
+    private int temp;
 
     /**
      * Creating new Wine with given name, liquid, taste, color and dishes
@@ -31,12 +33,14 @@ public class Wine extends SimpleDrink{
      * @param taste tastes of the Wine
      * @param color color of the Wine
      * @param dishes dish were the Wine is served to
+     * @param temp temperature of the wine
      */
-    Wine(String name, Liquid liquid, ArrayList<String> taste, String color, ArrayList<String> dishes){
+    Wine(String name, Liquid liquid, ArrayList<String> taste, String color, ArrayList<String> dishes, int temp){
         super(name, liquid);
         this.taste = taste;
         this.color = color;
         this.dishes = dishes;
+        this.temp = temp;
     }
 
     /**
@@ -100,15 +104,42 @@ public class Wine extends SimpleDrink{
      *
      * @return temp
      */
+    public int getTemp() { return this.temp;}
 
     /**
      * Setter for the temperature of Wine
      *
      * @param temp new temp
      */
+    public void setTemp(int temp) {
+        this.temp = temp;
+    }
 
     /**
      * Method serve
      * Serve the Wine (can throw a TempException)
      */
+    public String serve() throws TempException {
+        switch (this.color) {
+            case "white":
+                if (this.temp >= 9 && this.temp <= 14) {
+                    return this.name + " was served with a temperature of" + this.temp;
+                }
+                break;
+            case "red":
+                if (this.temp >= 12 && this.temp <= 18) {
+                    return this.name + " was served with a temperature of" + this.temp;
+                }
+                break;
+
+            case "sparkling":
+                if (this.temp >= 6 && this.temp <= 7) {
+                    return this.name + " was served with a temperature of" + this.temp;
+                }
+                break;
+            default: break;
+        }
+        throw new TempException();
     }
+
+}
