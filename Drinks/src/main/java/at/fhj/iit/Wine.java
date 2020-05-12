@@ -20,6 +20,10 @@ public class Wine extends SimpleDrink{
     private ArrayList<String> dishes;
 
     /**
+     * temperature of the wine in Celsius
+     */
+
+    /**
      * Creating new Wine with given name, liquid, taste, color and dishes
      *
      * @param name Name of the Drink
@@ -91,5 +95,20 @@ public class Wine extends SimpleDrink{
         this.dishes = dishes;
     }
 
+    /**
+     * Getter for the temperature of wine
+     *
+     * @return temp
+     */
 
+    /**
+     * Setter for the temperature of Wine
+     *
+     * @param temp new temp
+     */
+
+    /**
+     * Method serve
+     * Serve the Wine (can throw a TempException)
+     */
     }
