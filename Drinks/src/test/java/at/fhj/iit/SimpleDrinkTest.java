@@ -32,4 +32,16 @@ public class SimpleDrinkTest {
         assertEquals(5.0, beer.getAlcoholPercent(), 0.001);
         assertTrue(beer.isAlcoholic());
     }
+
+    /**
+     * Testing the Constructure for an nonalcoholic liquid (Limo)
+     */
+    @Test
+    @DisplayName("Testing constructor beer")
+    public void testConstructorNonalcoholic(){
+        assertEquals("Fanta", limo.getName());
+        assertEquals(1.0, limo.getVolume(), 0.001);
+        assertEquals(0.0, limo.getAlcoholPercent(), 0.001);
+        assertFalse(limo.isAlcoholic());
+    }
 }
