@@ -63,6 +63,28 @@ public class Wine extends SimpleDrink{
     }
 
     /**
+     * Get the List Taste in String
+     */
+    public String getTasteString(){
+        String ret = "";
+        for (int i = 0; i < taste.size(); i++){
+            ret += taste.get(i);
+        }
+        return ret;
+    }
+
+    /**
+     * Get the List Taste in String
+     */
+    public String getDishesString(){
+        String ret = "";
+        for (int i = 0; i < dishes.size(); i++){
+            ret += dishes.get(i);
+        }
+        return ret;
+    }
+
+    /**
      * Getter color of wine
      *
      * @return color of wine

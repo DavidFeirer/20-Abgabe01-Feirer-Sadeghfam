@@ -37,7 +37,7 @@ public class SimpleDrinkTest {
      * Testing the Constructure for an nonalcoholic liquid (Limo)
      */
     @Test
-    @DisplayName("Testing constructor beer")
+    @DisplayName("Testing constructor limo")
     public void testConstructorNonalcoholic(){
         assertEquals("Fanta", limo.getName());
         assertEquals(1.0, limo.getVolume(), 0.001);
