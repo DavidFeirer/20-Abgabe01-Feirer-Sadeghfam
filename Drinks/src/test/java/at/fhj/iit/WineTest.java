@@ -110,6 +110,12 @@ public class WineTest {
     @DisplayName("Testing serve()")
     public void testSparklingServeThrow(){
         assertThrows(TempException.class, ()->{s1.serve();});
+        s1.setTemp(7);
+        try{
+            assertEquals(s1.serve(),"Frizzante was served with a temperature of 7");
+        } catch (TempException e){
+            e.printStackTrace();
+        }
     }
 
     /**
