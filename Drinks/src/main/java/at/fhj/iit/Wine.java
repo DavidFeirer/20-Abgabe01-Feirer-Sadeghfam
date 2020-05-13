@@ -3,6 +3,9 @@ package at.fhj.iit;
 import javax.naming.directory.AttributeModificationException;
 import java.util.ArrayList;
 
+/**
+ * Class Wine extends Simple Drink
+ */
 public class Wine extends SimpleDrink{
 
     /**
