@@ -26,7 +26,7 @@ public class SimpleDrinkTest {
      * Testing the Constructure for an alcoholic liquid (beer)
      */
     @Test
-    @DisplayName("Testing constructor beer")
+    @DisplayName("Testing constructor Limo")
     public void testConstructorAlcoholic(){
         assertEquals("Puntigamer", beer.getName());
         assertEquals(0.5, beer.getVolume(), 0.001);
@@ -45,7 +45,9 @@ public class SimpleDrinkTest {
         assertEquals(0.0, limo.getAlcoholPercent(), 0.001);
         assertFalse(limo.isAlcoholic());
     }
-
+    /**
+     *  Testing default constructures
+     */
     @Test
     @DisplayName("Testing default constructor")
     public void testDefaultConstructure(){
