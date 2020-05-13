@@ -61,6 +61,20 @@ public class WineTest {
         assertEquals(w1.getDishesString(), "Fisch");
         assertEquals(w1.getTemp(), 12, 0.001);
     }
+    /**
+     * testing constructure
+     */
+    @Test
+    @DisplayName("Testing constructor")
+    public void testConstructorSparkling(){
+        assertEquals(s1.getName(), "Frizzante");
+        assertEquals(s1.getVolume(), 1.0, 0.001);
+        assertEquals(s1.getAlcoholPercent(), 9.5, 0.001);
+        assertEquals(s1.getTasteString(), "spritzigtrocken");
+        assertEquals(s1.getColor(), "sparkling");
+        assertEquals(s1.getDishesString(), "");
+        assertEquals(s1.getTemp(), 9, 0.001);
+    }
 
     /**
      * testing serve with a white wine that cant be served
@@ -72,11 +86,22 @@ public class WineTest {
     }
     /**
      * testing serve with a red wine that can be served
+     * also with a white, sparkling Wine that can be served
      */
     @Test
     @DisplayName("Testing serve()")
     public void testRedServeNoThrow(){
         assertDoesNotThrow(()->{r1.serve();}, "Wine cannot be served please check the Temperature");
+        try{
+            assertEquals(w1.serve(),"Gelber Muskateller was served with a temperature of 12");
+        } catch (TempException e){
+            e.printStackTrace();
+        }
+        try{
+            assertEquals(s1.serve(),"Frizzante was served with a temperature of 9");
+        } catch (TempException e){
+            e.printStackTrace();
+        }
     }
     /**
      * testing serve with a sparkling wine that cant be served
@@ -87,4 +112,15 @@ public class WineTest {
         assertThrows(TempException.class, ()->{s1.serve();});
     }
 
+    /**
+     * Testing setters
+     */
+    @Test
+    @DisplayName("Testing setter")
+    public void testSetter(){
+        w1.setColor("red");
+        w1.setTemp(15);
+        assertEquals(w1.getColor(),"red");
+        assertEquals(w1.getTemp(), 15);
+    }
 }

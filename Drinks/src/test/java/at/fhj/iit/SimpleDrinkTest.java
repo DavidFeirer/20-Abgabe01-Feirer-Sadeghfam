@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @DisplayName("Testing SimpleDrink implementation")
 public class SimpleDrinkTest {
 
-    private SimpleDrink beer, limo;
+    private SimpleDrink beer, limo, beer2;
 
     /**
      * inits an alcoholic and nonalcoholic liquid for EACH test
@@ -19,6 +19,7 @@ public class SimpleDrinkTest {
         // SETUP PHASE
         beer = new SimpleDrink("Puntigamer", new Liquid("Bier", 0.5, 5.0));
         limo = new SimpleDrink("Fanta", new Liquid("Orangenlimo", 1.0, 0.0));
+        beer2 = new SimpleDrink();
     }
 
     /**
@@ -43,5 +44,16 @@ public class SimpleDrinkTest {
         assertEquals(1.0, limo.getVolume(), 0.001);
         assertEquals(0.0, limo.getAlcoholPercent(), 0.001);
         assertFalse(limo.isAlcoholic());
+    }
+
+    @Test
+    @DisplayName("Testing default constructor")
+    public void testDefaultConstructure(){
+        try{
+            assertEquals(beer2.getVolume(), null);
+            assertEquals(beer2.getAlcoholPercent(), null);
+        } catch (NullPointerException e){
+            e.printStackTrace();
+        }
     }
 }

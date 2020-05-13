@@ -108,18 +108,18 @@ public class Wine extends SimpleDrink{
         switch (this.color) {
             case "white":
                 if (this.temp >= 9 && this.temp <= 14) {
-                    return this.name + " was served with a temperature of" + this.temp;
+                    return this.name + " was served with a temperature of " + this.temp;
                 }
                 break;
             case "red":
                 if (this.temp >= 12 && this.temp <= 18) {
-                    return this.name + " was served with a temperature of" + this.temp;
+                    return this.name + " was served with a temperature of " + this.temp;
                 }
                 break;
 
             case "sparkling":
                 if (this.temp >= 6 && this.temp <= 7) {
-                    return this.name + " was served with a temperature of" + this.temp;
+                    return this.name + " was served with a temperature of " + this.temp;
                 }
                 break;
             default: break;
