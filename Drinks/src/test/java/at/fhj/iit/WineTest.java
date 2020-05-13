@@ -97,11 +97,7 @@ public class WineTest {
         } catch (TempException e){
             e.printStackTrace();
         }
-        try{
-            assertEquals(s1.serve(),"Frizzante was served with a temperature of 9");
-        } catch (TempException e){
-            e.printStackTrace();
-        }
+
     }
     /**
      * testing serve with a sparkling wine that cant be served
